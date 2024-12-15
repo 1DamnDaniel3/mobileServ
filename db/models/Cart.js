@@ -30,6 +30,9 @@ const Cart = sequelize.define('Cart', {
         defaultValue: 1,
         allowNull: false
     }
+},{
+    tableName: 'cart',
+    timestamps: false
 });
 
 module.exports = Cart;

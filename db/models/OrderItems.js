@@ -33,6 +33,9 @@ const OrderItems = sequelize.define('OrderItems', {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false
     }
+},{
+    tableName: 'order_items',
+    timestamps: false
 });
 
 module.exports = OrderItems;

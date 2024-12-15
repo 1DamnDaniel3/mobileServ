@@ -29,6 +29,9 @@ const Delivery = sequelize.define('Delivery', {
         defaultValue: 'not shipped',
         allowNull: false
     }
+},{
+    tableName: 'delivery',
+    timestamps: false
 });
 
 module.exports = Delivery;

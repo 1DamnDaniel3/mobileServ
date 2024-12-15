@@ -12,6 +12,9 @@ const Categories = sequelize.define('Categories', {
       unique: true,
       allowNull: false
     }
-  });
+  },{
+    tableName: 'categories',
+    timestamps: false
+});
   
   module.exports = Categories;

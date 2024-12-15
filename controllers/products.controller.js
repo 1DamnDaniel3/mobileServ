@@ -8,7 +8,7 @@ class ProductsController extends BaseController {
     }
 
     // OTHER METHODS REQUIRED
-
+    
 
 }
 

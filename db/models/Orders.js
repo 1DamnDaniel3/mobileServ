@@ -29,6 +29,9 @@ const Orders = sequelize.define('Orders', {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
     }
+},{
+    tableName: 'orders', 
+    timestamps: false 
 });
 
 module.exports = Orders;
