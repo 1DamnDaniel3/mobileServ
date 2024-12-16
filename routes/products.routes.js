@@ -10,5 +10,9 @@ router.get('/products/:id', (req, res) => productsController.getOne(req, res));
 router.put('/products/:id', (req, res) => productsController.updateData(req, res));
 router.delete('/products/:id', (req, res) => productsController.delete(req, res));
 
+// OTHER
+
+router.post('/products/getByCategories', (req, res) => productsController.getProductsByCategories(req, res));
+
 
 module.exports = router;
