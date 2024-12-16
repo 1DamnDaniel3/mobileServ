@@ -13,6 +13,7 @@ router.delete('/users/:id', (req, res) => userController.delete(req, res));
 // OTHER
 
 router.post('/users/findByEmail', (req, res) => userController.findUserByEmail(req, res));
+router.post('/users/login', (req, res) => userController.userLogin(req, res));
 
 
 
