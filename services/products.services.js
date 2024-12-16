@@ -10,6 +10,12 @@ class ProductsServices{
 
     }
 
+    async getByName(name){
+        return await Products.findOne({
+            where: {name}
+        })
+    }
+
 }
 
 module.exports = new ProductsServices;

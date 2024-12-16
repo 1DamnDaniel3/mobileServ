@@ -9,8 +9,13 @@ class CartServices{
                 model: Products
             }]
         })
-    }
+    };
 
+    async clearCart(user_id){
+        return await Cart.destroy({
+            where: {user_id}
+        })
+    }
 }
 
 module.exports = new CartServices;

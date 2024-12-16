@@ -13,6 +13,7 @@ router.delete('/products/:id', (req, res) => productsController.delete(req, res)
 // OTHER
 
 router.post('/products/getByCategories', (req, res) => productsController.getProductsByCategories(req, res));
+router.post('/products/getByName', (req, res) => productsController.getProductsByName(req, res));
 
 
 module.exports = router;

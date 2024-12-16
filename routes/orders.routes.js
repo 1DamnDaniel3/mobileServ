@@ -13,6 +13,7 @@ router.delete('/orders/:id', (req, res) => ordersController.delete(req, res));
 // OTHER
 
 router.post('/orders/findOneUser', (req, res) => ordersController.getUsersOrders(req, res));
+router.post('/orders/orderFormation', (req, res) => ordersController.orderFormation(req, res));
 
 
 module.exports = router;
