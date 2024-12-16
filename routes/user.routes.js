@@ -10,5 +10,10 @@ router.get('/users/:id', (req, res) => userController.getOne(req, res));
 router.put('/users/:id', (req, res) => userController.updateData(req, res));
 router.delete('/users/:id', (req, res) => userController.delete(req, res));
 
+// OTHER
+
+router.post('/users/findByEmail', (req, res) => userController.findUserByEmail(req, res));
+
+
 
 module.exports = router;

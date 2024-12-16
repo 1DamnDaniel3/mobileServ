@@ -1,5 +1,4 @@
-const { model } = require('../controllers/user.controller');
-const { Orders, Users, OrderItems, Products } = require('../db')
+const { Orders, OrderItems, Products } = require('../db')
 
 class OrdersService{
     async getOneUserOrders(user_id){
