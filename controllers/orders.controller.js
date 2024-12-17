@@ -1,6 +1,7 @@
 const BaseController = require('./base.controller')
 const OrdersService = require('../services/orders.services')
 const CartServices = require('../services/cart.services')
+const OrderItemsServices = require('../services/order_items.services')
 const { Orders } = require('../db')
 
 
@@ -46,6 +47,7 @@ class OrdersController extends BaseController {
             }, 0);
 
             const orderData = await OrdersService.makeOrder(user_id, total_price); // create Order
+            await OrderItemsServices.setOrderItems(user_id, cartData, orderData.id); // move products into order_items
             await CartServices.clearCart(user_id); // clear cart
             
             
