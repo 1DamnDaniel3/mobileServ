@@ -13,6 +13,7 @@ router.delete('/cart/:id', (req, res) => cartController.delete(req, res));
 // OTHER
 
 router.post('/cart/getUserCart', (req, res) => cartController.findUsersCart(req, res));
+router.post('/cart/deleteFromCart', (req, res) => cartController.deleteFromUserCart(req, res));
 
 
 module.exports = router;

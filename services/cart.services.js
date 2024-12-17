@@ -15,6 +15,15 @@ class CartServices{
         return await Cart.destroy({
             where: {user_id}
         })
+    };
+
+    async deleteFromCart(user_id, product_id){
+        return await Cart.destroy({
+            where: {
+                user_id: user_id,
+                product_id: product_id,
+            }
+        })
     }
 }
 
