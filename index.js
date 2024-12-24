@@ -7,6 +7,7 @@ const productsRouter = require('./routes/products.routes')
 const ordersRouter = require('./routes/orders.routes')
 const cartRouter = require('./routes/cart.routes')
 const categoriesRouter = require('./routes/categories.routes')
+const orderItemsRouter = require('./routes/orders_items.routes')
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -20,5 +21,6 @@ app.use('/api', productsRouter);
 app.use('/api', ordersRouter);
 app.use('/api', cartRouter);
 app.use('/api', categoriesRouter);
+app.use('/api', orderItemsRouter);
 
 app.listen(PORT, () => console.log(`server started on post ${PORT}`))
